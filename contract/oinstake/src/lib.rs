@@ -1029,7 +1029,7 @@ impl OinStake {
             }
 
             FtOnTransferArgs::InjectReward => {
-                //判断是否是奖励币种
+                //Determine if it is a reward currency
                 self.find_reward_coin(token_account_id.clone());
                 
                 assert!(self.is_owner(sender_id.clone().into()), "only owner can do this!");
